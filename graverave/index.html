@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grave Rave 2023</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="../assets/icon.png" type="image/x-icon" />
+  <link href="../assets/fontawesome-5.12.1/css/all.css" rel="stylesheet">
+</head>
+
+<body onload="generateLocalTimes()">
+  <img id="event_flyer" src="flyer.png" alt="Event Flyer">
+
+  <!-- <p id="title"><a href="https://cyberdoof.com/plh-xfzu-hgv" target="_blank">Join The Fun In Cyberspace</a></p> -->
+
+  <p id="title">Schedule</p>
+  <p id="notes">All times shown in your local time zone</p>
+
+  <div id="links">
+    <a class="link_box" href="https://www.twitch.tv/tsuki_oto" target="_blank">
+      <div class="link_time"><span id='timetable0'></span></div>
+      <div class="link_artist">Tsuki</div>
+    </a>
+    <a class="link_box" href="https://www.twitch.tv/noxmoderato" target="_blank">
+      <div class="link_time"><span id='timetable1'></span></div>
+      <div class="link_artist">NoxModerato</div>
+    </a>
+    <a class="link_box" href="https://www.twitch.tv/archaic_electro" target="_blank">
+      <div class="link_time"><span id='timetable2'></span></div>
+      <div class="link_artist">Archaic Electro</div>
+    </a>
+    <a class="link_box" href="https://www.twitch.tv/skullzy_p" target="_blank">
+      <div class="link_time"><span id='timetable3'></span></div>
+      <div class="link_artist">Skullzy</div>
+    </a>
+    <a class="link_box" href="https://www.twitch.tv/destroywithscience" target="_blank">
+      <div class="link_time"><span id='timetable4'></span></div>
+      <div class="link_artist">DestroyWithScience</div>
+    </a>
+    <a class="link_box" href="https://www.twitch.tv/wombra" target="_blank">
+      <div class="link_time"><span id='timetable5'></span></div>
+      <div class="link_artist">Wombra</div>
+    </a>
+  </div>
+
+  <p id="title">Discord</p>
+  <p id="notes">
+    Chat and share videos and screenshots from the event!<br>
+    <a href="https://discord.gg/mtq4wqrJ5N" target="_blank">Discord Invite</a>
+  </p>
+
+  <script src='../luxon.min.js'></script>
+
+  <script type="text/javascript">
+    function generateLocalTimes() {
+      const timeZone = 'America/Toronto';
+      const stringFormat = "yyyy-MM-dd hh:mm a";
+      var DateTime = luxon.DateTime;
+
+      var schedule = [
+        DateTime.local(2023, 10, 21, 18, 0, { zone: timeZone }),
+        DateTime.local(2023, 10, 21, 19, 0, { zone: timeZone }),
+        DateTime.local(2023, 10, 21, 20, 0, { zone: timeZone }),
+        DateTime.local(2023, 10, 21, 21, 0, { zone: timeZone }),
+        DateTime.local(2023, 10, 21, 22, 0, { zone: timeZone }),
+        DateTime.local(2023, 10, 21, 23, 0, { zone: timeZone })
+      ];
+
+      for (var i = 0; i < (schedule.length); i++) {
+        document.getElementById('timetable' + i).innerHTML = schedule[i].toLocal().toFormat(stringFormat);
+      }
+     }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+:root {
+    --bg_color:#181c18;
+    --fg_color: #efa50a;
+    --accent_color: #f8f8f2;
+    --font: 'Karla', sans-serif;
+}
+
+body {
+    background-color: var(--bg_color);
+    color: var(--fg_color);
+}
+
+a {
+    color: var(--accent_color);
+}
+
+#event_flyer {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 35px auto 20px;
+    border-radius: 2.5%;
+}
+
+#notes{
+    display: block;
+    text-align: center;
+    color: var(--fg_color);
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#title{
+    display: block;
+    text-align: center;
+    color: var(--fg_color);
+    font-family: var(--font);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#links{
+    display: block;
+    margin: 27px auto;
+    max-width: 500px;
+    width: auto;
+}
+
+.link_box {
+    display: flex;
+    margin-bottom: -1px;
+    padding: 10px;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    background-color: var(--bg_color);
+    border: solid var(--fg_color) 1px;
+    color: var(--fg_color);
+    font-family: var(--font);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.link_time {
+    flex: 1;
+    text-align: left;
+    color: var(--accent_color);
+}
+
+.link_artist {
+    flex: 1;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.link_box:hover {
+    background-color: var(--fg_color);
+    border: solid var(--fg_color) 1px;
+    color: var(--bg_color);
+}
+
+.link_box:hover .link_time {
+    color: var(--bg_color);
+}
+
+.fab, .fas{
+    font-size: 2rem;
+}
