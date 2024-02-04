@@ -87,3 +87,23 @@ a {
 .fab, .fas{
     font-size: 2rem;
 }
+
+#vod-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 560px;
+}
+
+#vod {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+#vod iframe, #vod object, #vod embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
