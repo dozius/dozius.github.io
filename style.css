@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+@import url("fonts/karla/karla.css");
 :root {
     --bg_color:#282a36;
     --fg_color: #f8f8f2;
