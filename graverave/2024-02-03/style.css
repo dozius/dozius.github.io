@@ -1,7 +1,7 @@
-@import url("../fonts/karla/karla.css");
+@import url("../../fonts/karla/karla.css");
 :root {
-    --bg_color:#181c18;
-    --fg_color: #efa50a;
+    --bg_color:#122235;
+    --fg_color: #acccd7;
     --accent_color: #f8f8f2;
     --font: 'Karla', sans-serif;
 }
