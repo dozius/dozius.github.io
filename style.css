@@ -61,6 +61,10 @@ ul li::marker {
     color: var(--accent_color);
 }
 
+ol li::marker {
+    color: var(--accent_color);
+}
+
 details summary {
     cursor: pointer;
 }
