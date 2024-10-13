@@ -103,6 +103,8 @@ details summary > * {
     background-color: var(--bg_color);
     display: flex;
     margin-bottom: 15px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     padding: 9px;
     border: solid var(--accent_color) 2px;
     border-radius: 10px;
