@@ -1,0 +1,38 @@
+@import url("/style.css");
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+summary::marker {
+  color: var(--accent_color);
+}
+
+details > summary {
+  border: 2px solid var(--select_color);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  transition: background-color .25s cubic-bezier(.08,.59,.29,.99);
+}
+
+details:hover > summary {
+  background-color: var(--select_color);
+}
+
+details[open] > summary {
+  background-color: var(--select_color);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.guidelines-details {
+  background-color: var(--bg_color_alt);
+  border-left: 2px solid var(--select_color);
+  border-right: 2px solid var(--select_color);
+  border-bottom: 2px solid var(--select_color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0.5rem;
+}

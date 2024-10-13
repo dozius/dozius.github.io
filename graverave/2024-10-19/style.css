@@ -1,9 +1,9 @@
 @import url("/style.css");
 :root {
     /* Style Overrides */
-    --bg_color:     #122235;
+    --bg_color:     #0d0c0b;
     --fg_color:     var(--p_fg);
-    --header_color: #acccd7;
-    --accent_color: #acccd7;
+    --header_color: #ff7518;
+    --accent_color: #ff7518;
     --link_color:   var(--p_fg);
 }

@@ -1,81 +1,160 @@
-@import url("fonts/karla/karla.css");
+@import url("/fonts/karla/karla.css");
 :root {
-    --bg_color:#282a36;
-    --fg_color: #f8f8f2;
-    --accent_color: #bd93f9;
+    /* Palette */
+
+    --p_bg:        #282a36;
+    --p_bg_dark:   #21222c;
+    --p_fg:        #f8f8f2;
+    --p_selection: #44475a;
+    --p_comment:   #6272a4;
+    --p_black:     #191a21;
+    --p_cyan:      #8be9fd;
+    --p_green:     #50fa7b;
+    --p_orange:    #ffb86c;
+    --p_pink:      #ff79c6;
+    --p_purple:    #bd93f9;
+    --p_red:       #ff5555;
+    --p_yellow:    #f1fa8c;
+
+    /* Style colors */
+    --bg_color:     var(--p_bg);
+    --bg_color_alt: var(--p_bg_dark);
+    --fg_color:     var(--p_fg);
+    --header_color: var(--p_fg);
+    --accent_color: var(--p_purple);
+    --link_color:   var(--p_purple);
+    --select_color: var(--p_selection);
+
+    /* Other constants */
     --font: 'Karla', sans-serif;
 }
 
 body {
     background-color: var(--bg_color);
     color: var(--fg_color);
+    font-family: var(--font);
 }
 
 a {
+    color: var(--link_color);
+}
+
+h1 {
+    color: var(--header_color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--header_color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--header_color);
+    font-size: 1.15rem;
+    font-weight: normal;
+}
+
+ul li::marker {
     color: var(--accent_color);
 }
 
-#user_photo {
+details summary {
+    cursor: pointer;
+}
+
+details summary > * {
+    display: inline;
+}
+
+.layout-box {
     display: block;
-    height: 110px;
-    width: 110px;
-    margin: 35px auto 20px;
+    margin: auto;
+    max-width: 80ch;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.user-photo {
+    display: block;
+    max-width: 110px;
+    margin: auto;
     border-radius: 5%;
 }
 
-#user_name{
+.wombra {
     display: block;
-    text-align: center;
-    color: var(--fg_color);
-    font-family: var(--font);
-    font-size: 1rem;
-    font-weight: 700;
+    max-width: 230px;
+    margin: auto;
 }
 
-#aliases{
+.link-tree {
     display: block;
-    text-align: center;
-    color: var(--fg_color);
-    font-family: var(--font);
-    font-size: 0.70rem;
-    font-weight: 700;
-}
-
-#links{
-    display: block;
-    margin: 27px auto;
+    margin: 1.5em auto;
     max-width: 500px;
     width: auto;
 }
 
-.link_box {
+.link-tree-box {
+    background-color: var(--bg_color);
     display: flex;
     margin-bottom: 15px;
-    padding: 10px;
-    transition: all .25s cubic-bezier(.08,.59,.29,.99);
-    background-color: var(--bg_color);
-    border: solid var(--fg_color) 2px;
+    padding: 9px;
+    border: solid var(--accent_color) 2px;
+    border-radius: 10px;
     color: var(--fg_color);
-    font-family: var(--font);
     font-size: 1rem;
     text-decoration: none;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
 }
 
-.link_icon, .right  {
-    flex: 1;
-    text-align: left;
-}
-
-.link_text {
-    align-self: center;
-}
-
-.link_box:hover{
+.link-tree-box:hover {
     background-color: var(--accent_color);
-    border: solid var(--accent_color) 2px;
+    color: var(--bg_color);
+    transform: scale(1.05);
+}
+
+.link-tree-box-icon {
+    flex: 1;
+    align-self: center;
+    text-align: left;
+    font-size: 2rem;
+    color: var(--accent_color);
+}
+
+.link-tree-box:hover .link-tree-box-icon {
     color: var(--bg_color);
 }
 
-.fab, .fas{
-    font-size: 2rem;
+.link-tree-box-text {
+    align-self: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.link-tree-box-right {
+    flex: 1;
+    align-self: center;
+    text-align: right;
+    color: var(--accent_color);
+}
+
+.link-tree-box:hover .link-tree-box-right {
+    color: var(--bg_color);
+}
+
+.event-layout {
+    max-width: 500px;
+    margin: auto;
+}
+
+.event-flyer {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border-radius: 2.5%;
 }
