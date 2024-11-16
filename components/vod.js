@@ -14,43 +14,19 @@ class VODElement extends HTMLElement {
     }
 
     const container = document.createElement("div");
-    container.setAttribute("class", "vod-container");
-
-    const vod = document.createElement("div");
-    vod.setAttribute("class", "vod");
-    container.appendChild(vod);
+    container.setAttribute("style", "position: relative; padding-top: 56.25%;");
 
     const frame = document.createElement("iframe");
-    frame.setAttribute("title", "YouTube video player");
+    frame.setAttribute("title", titleText);
+    frame.setAttribute("width", "100%");
+    frame.setAttribute("height", "100%");
     frame.setAttribute("frameborder", "0");
-    frame.setAttribute("allow", "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
     frame.setAttribute("allowfullscreen", "");
-    frame.setAttribute("src", this.getAttribute("src"));
-    vod.appendChild(frame);
+    frame.setAttribute("sandbox", "allow-same-origin allow-scripts allow-popups allow-forms");
+    frame.setAttribute("src", "https://makertube.net/videos/embed/" + this.getAttribute("id") + "?warningTitle=0&amp;p2p=0");
+    frame.setAttribute("style", "position: absolute; inset: 0px;");
+    container.appendChild(frame);
 
-    const style = document.createElement("style");
-    style.textContent = `
-      .vod-container {
-          width: 100%;
-          margin: auto;
-      }
-
-      .vod {
-          position: relative;
-          padding-bottom: 56.25%; /* maintain 16:9 aspect ratio */
-          height: 0;
-      }
-
-      .vod iframe, .vod object, .vod embed {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-      }
-    `;
-
-    shadow.appendChild(style);
     shadow.appendChild(container)
   }
 }
