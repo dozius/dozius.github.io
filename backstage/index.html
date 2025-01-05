@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
   <title>Backstage</title>
 </head>
 
 <body>
+<div class="layout-wrapper">
   <header>
+    <x-header active=""></x-header>
   </header>
 
   <main>
-    <div class="layout-box">
       <h1>Grave Rave Backstage</h1>
 
       <h2>Cyberdoof Performer Setup</h2>
@@ -109,10 +112,11 @@
           </details>
         </li>
       </ul>
-    </div>
   </main>
 
   <footer>
+    <x-footer></x-footer>
   </footer>
+</div>
 </body>
 </html>

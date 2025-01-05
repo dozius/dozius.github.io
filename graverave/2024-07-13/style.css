@@ -1,9 +1,18 @@
 @import url("/style.css");
 :root {
-    /* Style Overrides */
-    --bg_color:     #18191c;
-    --fg_color:     var(--p_fg);
-    --header_color: #efa50a;
-    --accent_color: #efa50a;
-    --link_color:   var(--p_fg);
+  --grave_bg_color: #18191c;
+  --grave_accent_color: #efa50a;
+  --grave_link_color: var(--p_fg);
+}
+
+body {
+  background-color: var(--grave_bg_color);
+}
+
+h1, h2, h3 {
+  color: var(--grave_accent_color);
+}
+
+a {
+  color: var(--link_color);
 }

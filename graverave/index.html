@@ -1,4 +1,60 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to Grave Rave</title>
-<meta http-equiv="refresh" content="0; URL=https://skullzy.ca/graverave/2024-10-19">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+  Redirect inactive while no upcoming or active event
+  <meta http-equiv="refresh" content="0; URL=https://skullzy.ca/graverave/2024-10-19">
+  -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
+  <title>Grave Rave</title>
+</head>
+
+<body>
+<div class="layout-wrapper">
+  <header>
+    <x-header active="grave rave"></x-header>
+  </header>
+
+  <main>
+    <h1 class="text-center">Grave Rave</h1>
+
+    <p>
+      Grave rave is a semi-regular series of events that take place in a spooky
+      voxel graveyard powered by the <a
+      href="https://www.cyberdoof.com">Cyberdoof</a> platform.
+    </p>
+
+    <h2 class="text-center">Past Events</h2>
+
+    <div class="past-events-layout">
+      <a class="past-event" href="./2024-10-19/">
+        <img src="./2024-10-19/flyer.jpg">
+        <span class="past-event-text">2024-10-19</span>
+      </a>
+      <a class="past-event" href="./2024-07-13/">
+        <img src="./2024-07-13/flyer.jpg">
+        <span class="past-event-text">2024-07-13</span>
+      </a>
+      <a class="past-event" href="./2024-02-03/">
+        <img src="./2024-02-03/flyer.jpg">
+        <span class="past-event-text">2024-02-03</span>
+      </a>
+      <a class="past-event" href="./2023-10-21/">
+        <img src="./2023-10-21/flyer.jpg">
+        <span class="past-event-text">2023-10-21</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <x-footer></x-footer>
+  </footer>
+</div>
+</body>
+</html>

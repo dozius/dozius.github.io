@@ -1,165 +1,188 @@
 @import url("/fonts/karla/karla.css");
+@import url("fonts/rubik_glitch/rubik_glitch.css");
 :root {
-    /* Palette */
-    --p_bg:        #282a36;
-    --p_bg_dark:   #21222c;
-    --p_fg:        #f8f8f2;
-    --p_selection: #44475a;
-    --p_comment:   #6272a4;
-    --p_black:     #191a21;
-    --p_cyan:      #8be9fd;
-    --p_green:     #50fa7b;
-    --p_orange:    #ffb86c;
-    --p_pink:      #ff79c6;
-    --p_purple:    #bd93f9;
-    --p_red:       #ff5555;
-    --p_yellow:    #f1fa8c;
+/* Palette */
+  --p_bg:        #282a36;
+  --p_bg_dark:   #21222c;
+  --p_fg:        #f8f8f2;
+  --p_selection: #44475a;
+  --p_comment:   #6272a4;
+  --p_black:     #191a21;
+  --p_cyan:      #8be9fd;
+  --p_green:     #50fa7b;
+  --p_orange:    #ffb86c;
+  --p_pink:      #ff79c6;
+  --p_purple:    #bd93f9;
+  --p_red:       #ff5555;
+  --p_yellow:    #f1fa8c;
 
-    /* Style colors */
-    --bg_color:     var(--p_bg);
-    --bg_color_alt: var(--p_bg_dark);
-    --fg_color:     var(--p_fg);
-    --header_color: var(--p_fg);
-    --accent_color: var(--p_purple);
-    --link_color:   var(--p_purple);
-    --select_color: var(--p_selection);
+  /* Style colors */
+  --bg_color:     var(--p_bg);
+  --bg_color_alt: var(--p_bg_dark);
+  --fg_color:     var(--p_fg);
+  --header_color: var(--p_fg);
+  --accent_color: var(--p_purple);
+  --link_color:   var(--p_purple);
+  --select_color: var(--p_selection);
 
-    /* Other constants */
-    --font: 'Karla', sans-serif;
+  /* Constants */
+  --font: 'Karla', sans-serif;
+  --glitch-font: 'Rubik Glitch', sans-serif;
+  --max-width: 82ch;
+  --header-height: 3rem;
+  --footer-height: 3rem;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: var(--bg_color);
-    color: var(--fg_color);
-    font-family: var(--font);
+  background-color: var(--bg_color);
+  color: var(--fg_color);
+  font-family: var(--font);
+  container-type: inline-size;
 }
 
 a {
-    color: var(--link_color);
+  color: var(--link_color);
 }
 
 h1 {
-    color: var(--header_color);
-    font-size: 2rem;
-    font-weight: bold;
+  color: var(--header_color);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 h2 {
-    color: var(--header_color);
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: var(--header_color);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 h3 {
-    color: var(--header_color);
-    font-size: 1.15rem;
-    font-weight: normal;
+  color: var(--header_color);
+  font-size: 1.15rem;
+  font-weight: normal;
 }
 
 ul li::marker {
-    color: var(--accent_color);
+  color: var(--accent_color);
 }
 
 ol li::marker {
-    color: var(--accent_color);
+  color: var(--accent_color);
 }
 
 details summary {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 details summary > * {
-    display: inline;
+  display: inline;
 }
 
-.layout-box {
-    display: block;
-    margin: auto;
-    max-width: 80ch;
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.layout-wrapper > header {
+  background-color: var(--bg_color_alt);
+  position: sticky;
+  top: 0;
+  z-index: 2147483649;
+}
+
+.layout-wrapper > main {
+  margin: auto;
+  padding: 0px 2ch 0px;
+  max-width: var(--max-width);
+  flex-grow: 1;
+}
+
+.layout-wrapper > footer {
+  background-color: var(--bg_color_alt);
 }
 
 .text-center {
-    text-align: center;
-}
-
-.user-photo {
-    display: block;
-    max-width: 110px;
-    margin: auto;
-    border-radius: 5%;
+  text-align: center;
 }
 
 .wombra {
-    display: block;
-    max-width: 230px;
-    margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  margin: auto;
 }
 
 .link-tree {
-    display: block;
-    margin: 1.5em auto;
-    max-width: 500px;
-    width: auto;
+  display: block;
+  margin: 1.5em auto;
 }
 
 .link-tree-box {
-    background-color: var(--bg_color);
-    display: flex;
-    margin-bottom: 15px;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    padding: 9px;
-    border: solid var(--accent_color) 2px;
-    border-radius: 10px;
-    color: var(--fg_color);
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+  background-color: var(--bg_color);
+  display: flex;
+  margin-bottom: 15px;
+  padding: 9px;
+  border: solid var(--accent_color) 2px;
+  border-radius: 10px;
+  color: var(--fg_color);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all .25s cubic-bezier(.08,.59,.29,.99);
+  gap: 3em;
 }
 
 .link-tree-box:hover {
-    background-color: var(--accent_color);
-    color: var(--bg_color);
-    transform: scale(1.05);
+  background-color: var(--accent_color);
+  color: var(--bg_color);
+  transform: scale(1.05);
 }
 
 .link-tree-box-icon {
-    flex: 1;
-    align-self: center;
-    text-align: left;
-    font-size: 2rem;
-    color: var(--accent_color);
+  flex: 1;
+  align-self: center;
+  text-align: left;
+  font-size: 2rem;
+  color: var(--accent_color);
 }
 
 .link-tree-box:hover .link-tree-box-icon {
-    color: var(--bg_color);
+  color: var(--bg_color);
 }
 
 .link-tree-box-text {
-    align-self: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .link-tree-box-right {
-    flex: 1;
-    align-self: center;
-    text-align: right;
-    color: var(--accent_color);
+  flex: 1;
+  align-self: center;
+  text-align: right;
+  color: var(--accent_color);
 }
 
 .link-tree-box:hover .link-tree-box-right {
-    color: var(--bg_color);
+  color: var(--bg_color);
 }
 
 .event-layout {
-    max-width: 500px;
-    margin: auto;
+  max-width: 500px;
+  margin: auto;
 }
 
 .event-flyer {
-    display: block;
-    margin: auto;
-    width: 100%;
-    border-radius: 2.5%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  border-radius: 2.5%;
 }

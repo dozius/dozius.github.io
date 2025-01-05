@@ -11,19 +11,18 @@
   <link href="/fonts/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
   <link href="/fonts/fontawesome/css/brands.min.css" rel="stylesheet" />
   <link href="/fonts/fontawesome/css/solid.min.css" rel="stylesheet" />
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
   <title>Skullzy's Links</title>
 </head>
 
 <body>
+<div class="layout-wrapper">
   <header>
+    <x-header active="home"></x-header>
   </header>
 
   <main>
-    <img class="user-photo" src="/assets/user-icon.jpg" alt="Pixel Skull Logo" />
-
-    <h2 class="text-center" style="margin-bottom: 0px;">Skullzy</h2>
-    <h3 class="text-center" style="color: var(--p_comment); font-style: italic; font-size: 0.8rem; margin-top: 0.3rem;">a.k.a Dozius, cisc</h3>
-
     <div class="link-tree">
       <a class="link-tree-box" href="https://www.twitch.tv/skullzy_p" target="_blank">
         <div class="link-tree-box-icon"><i class="fab fa-twitch"></i></div>
@@ -79,6 +78,8 @@
   </main>
 
   <footer>
+    <x-footer></x-footer>
   </footer>
+</div>
 </body>
 </html>

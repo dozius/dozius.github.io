@@ -10,11 +10,15 @@
   <link href="/fonts/fontawesome/css/solid.min.css" rel="stylesheet" />
   <script type="module" src='/components/eventschedule.js'></script>
   <script type="module" src='/components/vod.js'></script>
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
   <title>Grave Rave: Summer Camp 2024</title>
 </head>
 
 <body>
+<div class="layout-wrapper">
   <header>
+    <x-header></x-header>
   </header>
 
   <main>
@@ -43,6 +47,8 @@
   </main>
 
   <footer>
+    <x-footer></x-footer>
   </footer>
+</div>
 </body>
 </html>

@@ -58,17 +58,18 @@ class EventSchedule extends HTMLElement {
       @import url("/fonts/fontawesome/css/fontawesome.min.css");
       @import url("/fonts/fontawesome/css/solid.min.css");
 
-      .event-schedule{
+      .event-schedule {
         display: block;
         margin: auto;
         width: 100%;
+        padding-bottom: 2em;
       }
 
       .event-time-slot-box {
         display: flex;
         margin-bottom: -1px;
         padding: 1ch;
-        border: solid var(--accent_color) 1px;
+        border: solid var(--grave_accent_color) 1px;
         color: var(--fg_color);
         font-size: 1rem;
         text-decoration: none;
@@ -76,19 +77,19 @@ class EventSchedule extends HTMLElement {
       }
 
       .event-time-slot-box:hover {
-        background-color: var(--accent_color);
-        color: var(--bg_color);
+        background-color: var(--grave_accent_color);
+        color: var(--grave_bg_color);
       }
 
       .event-time-slot-time {
         flex: 3;
         text-align: left;
         align-self: center;
-        color: var(--accent_color);
+        color: var(--grave_accent_color);
       }
 
       .event-time-slot-box:hover .event-time-slot-time {
-        color: var(--bg_color);
+        color: var(--grave_bg_color);
       }
 
       .event-time-slot-artist {
@@ -101,11 +102,11 @@ class EventSchedule extends HTMLElement {
         flex: 1;
         align-self: center;
         text-align: right;
-        color: var(--accent_color);
+        color: var(--grave_accent_color);
       }
 
       .event-time-slot-box:hover .event-time-slot-right {
-        color: var(--bg_color);
+        color: var(--grave_bg_color);
       }
     `;
 

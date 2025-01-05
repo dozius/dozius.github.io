@@ -6,21 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="/style.css" />
   <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
   <title>404 Page Not Found</title>
 </head>
 
 <body>
+<div class="layout-wrapper">
   <header>
+    <x-header active=""></x-header>
   </header>
 
   <main>
+    <p></p> <!-- padding -->
     <img class="wombra" src="/assets/wombra.png" alt="D:">
     <h1 class="text-center">404 Page Not Found</h1>
     <p class="text-center">The page you are looking for has been lost in the void.</p>
-    <p class="text-center"><a href="https://skullzy.ca">Return home</a></p>
   </main>
 
   <footer>
+    <x-footer></x-footer>
   </footer>
+</div>
 </body>
 </html>
