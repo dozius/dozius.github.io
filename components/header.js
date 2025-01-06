@@ -177,11 +177,10 @@ class HeaderElement extends HTMLElement {
     }
 
     .header-nav-bar .nav-bar-list .nav-bar-active {
-      border: solid var(--accent_color) 2px;
-      background-color: var(--accent_color);
-      color: var(--bg_color_alt);
+      color: var(--accent_color);
       border-radius: 10px;
       padding: 0.25em;
+      font-weight: bold;
     }
 
     @media (max-width: 475px) {
