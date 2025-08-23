@@ -1,5 +1,9 @@
 @import url("/style.css");
 
+summary::marker {
+  color: var(--accent_color);
+}
+
 details > summary {
   border: 2px solid var(--select_color);
   border-radius: 10px;

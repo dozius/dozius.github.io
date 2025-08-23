@@ -81,10 +81,6 @@ li + li {
   margin-top: 0.5rem;
 }
 
-summary::marker {
-  color: var(--accent_color);
-}
-
 details summary {
   cursor: pointer;
 }
