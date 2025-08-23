@@ -1,0 +1,86 @@
+@import url("/style.css");
+
+details > summary {
+  border: 2px solid var(--select_color);
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  transition: background-color .25s cubic-bezier(.08,.59,.29,.99);
+}
+
+details:hover > summary {
+  background-color: var(--select_color);
+}
+
+details[open] > summary {
+  background-color: var(--select_color);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.spoilers {
+  background-color: var(--bg_color_alt);
+  border-left: 2px solid var(--select_color);
+  border-right: 2px solid var(--select_color);
+  border-bottom: 2px solid var(--select_color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0.5rem;
+}
+
+.negative {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--p_red);
+}
+
+.positive {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--p_green);
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background-color: var(--accent_color);
+  color: var(--bg_color_alt);
+}
+
+td {
+  width: fit-content;
+  white-space: nowrap;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--bg_color_alt);
+}
+
+table, th, td {
+  border: 2px solid var(--select_color);
+  border-collapse: collapse;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 810px) and (min-width: 744px) {
+  .col6 { display: none;}
+}
+
+@media screen and (max-width: 744px) and (min-width: 562px) {
+  .col4, .col6 { display: none;}
+}
+
+@media screen and (max-width: 562px) and (min-width: 422px) {
+  .col1, .col4, .col6 { display: none;}
+}
+
+@media screen and (max-width: 422px) and (min-width: 321px) {
+  .col1, .col3, .col4, .col6 { display: none;}
+}
+
+@media screen and (max-width: 321px) {
+  .col1, .col3, .col4, .col5, .col6 { display: none;}
+}

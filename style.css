@@ -77,6 +77,14 @@ ol li::marker {
   color: var(--accent_color);
 }
 
+li + li {
+  margin-top: 0.5rem;
+}
+
+summary::marker {
+  color: var(--accent_color);
+}
+
 details summary {
   cursor: pointer;
 }
@@ -85,11 +93,17 @@ details summary > * {
   display: inline;
 }
 
+code {
+  color: var(--p_cyan);
+  font-family: var(--font);
+}
+
 .layout-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: auto;
 }
 
 .layout-wrapper > header {

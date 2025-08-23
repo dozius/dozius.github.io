@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="/assets/icon.png" type="image/x-icon" />
+  <script type="module" src='/components/header.js'></script>
+  <script type="module" src='/components/footer.js'></script>
+  <title>Commands</title>
+</head>
+
+<body>
+<div class="layout-wrapper">
+  <header>
+    <x-header active=""></x-header>
+  </header>
+
+  <main>
+      <h1>Twitch Chat Commands</h1>
+
+      <h2>Public</h2>
+      <table>
+        <tr>
+          <th class="col1">Name</th>
+          <th class="col2">Command</th>
+          <th class="col3">Aliases</th>
+          <th class="col4">Inputs</th>
+          <th class="col5">Example</th>
+          <th class="col6">Input Easter Eggs?</th>
+        </tr>
+        <tr>
+          <td class="col1">Command List</td>
+          <td class="col2">!commands</td>
+          <td class="col3">!cmds</td>
+          <td class="col4"></td>
+          <td class="col5">!commands</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">Discord Info</td>
+          <td class="col2">!discord</td>
+          <td class="col3">!dc</td>
+          <td class="col4"></td>
+          <td class="col5">!discord</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">Emote Explosion</td>
+          <td class="col2">!k</td>
+          <td class="col3">!kap<br>!kappagen</td>
+          <td class="col4">any number of emotes</td>
+          <td class="col5">!k 💀🔥</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">Event Info</td>
+          <td class="col2">!event</td>
+          <td class="col3"></td>
+          <td class="col4"></td>
+          <td class="col5">!event</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">GSG Info</td>
+          <td class="col2">!gsg</td>
+          <td class="col3"></td>
+          <td class="col4"></td>
+          <td class="col5">!gsg</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">Hug</td>
+          <td class="col2">!hug</td>
+          <td class="col3">!hugs</td>
+          <td class="col4">valid username</td>
+          <td class="col5">!hug @skullzy_p</td>
+          <td class="col6 positive">✔</td>
+        </tr>
+        <tr>
+          <td class="col1">Lurk</td>
+          <td class="col2">!lurk</td>
+          <td class="col3"></td>
+          <td class="col4"></td>
+          <td class="col5">!lurk</td>
+          <td class="col6 negative">x</td>
+        </tr>
+        <tr>
+          <td class="col1">Meatfoam</td>
+          <td class="col2">!meatfoam</td>
+          <td class="col3"></td>
+          <td class="col4">valid username</td>
+          <td class="col5">!meatfoam @wombra</td>
+          <td class="col6 positive">✔</td>
+        </tr>
+        <tr>
+          <td class="col1">Skullzy Info</td>
+          <td class="col2">!info</td>
+          <td class="col3">!tip</br>!bandcamp</br>!merch</td>
+          <td class="col4"></td>
+          <td class="col5">!info</td>
+          <td class="col6 negative">x</td>
+        </tr>
+      </table>
+
+      <h2>Easter Eggs</h2>
+
+      <details>
+        <summary><h3>Spoilers!</h3></summary>
+        <div class="spoilers">
+          <p>
+            There are a few hidden things that are nods to some of my streamer
+            friends. If you know, you know. 😉
+          </p>
+          <ul>
+            <li>
+              Typing a <code>D:</code> anywhere in a message.
+            </li>
+            <li>
+              The command <code>!chat</code>.
+            </li>
+            <li>
+              The command <code>!p[n]</code> where <code>[n]</code> is any
+              number.
+            </li>
+          </ul>
+          <p>
+            The input easter eggs are when you forget the input, use yourself as
+            the input, or <code>skullzy_bot</code> as the input.
+          </p>
+        </div>
+      </details>
+  </main>
+
+  <footer>
+    <x-footer></x-footer>
+  </footer>
+</div>
+</body>
+</html>
