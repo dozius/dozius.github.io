@@ -1,0 +1,18 @@
+@import url("/style.css");
+:root {
+  --grave_bg_color: #150f0f;
+  --grave_accent_color: #efa50a;
+  --grave_link_color: var(--p_fg);
+}
+
+body {
+  background-color: var(--grave_bg_color);
+}
+
+h1, h2, h3 {
+  color: var(--grave_accent_color);
+}
+
+a {
+  color: var(--grave_link_color);
+}
