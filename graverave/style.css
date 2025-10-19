@@ -3,7 +3,7 @@
 .events-layout {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 1rem;
   padding-bottom: 1rem;
 }
@@ -11,12 +11,12 @@
 .current-event {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   background-color: var(--bg_color_alt);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: .25s cubic-bezier(.08,.59,.29,.99);
   transition-property: color, background-color, border-color;
 }
@@ -24,13 +24,13 @@
 .past-event {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  max-width: 300px;
+  max-width: calc((var(--max-width) / 2) - 20px);
   text-decoration: none;
   background-color: var(--bg_color_alt);
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: .25s cubic-bezier(.08,.59,.29,.99);
   transition-property: color, background-color, border-color;
 }
