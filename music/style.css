@@ -1,0 +1,131 @@
+@import url("/style.css");
+
+/* Release list */
+.release-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.release {
+  position: relative;
+  max-width: calc((var(--max-width) / 2) - 20px);
+  text-decoration: none;
+  background-color: var(--bg_color_alt);
+  padding: 5px;
+  border-radius: 10px;
+  transition: .25s cubic-bezier(.08,.59,.29,.99);
+  transition-property: color, background-color, border-color;
+}
+
+.release:hover {
+  background-color: var(--accent_color);
+  color: var(--bg_color_alt);
+}
+
+.release > img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  transition: .25s cubic-bezier(.08,.59,.29,.99);
+  transition-property: opacity;
+}
+
+.release:hover > img {
+  width: 100%;
+  opacity: 0;
+}
+
+.release-text {
+  position: absolute;
+  width: calc(100% - 10px);
+  left:50%; top:50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  transition: .25s cubic-bezier(.08,.59,.29,.99);
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.release:hover > .release-text {
+  opacity: 1;
+}
+
+.release-artist {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.release-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1em;
+}
+
+/* Release info pages */
+.release-info-layout {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  justify-content: center;
+}
+
+.release-info-cover {
+  flex: 1 0 250px;
+  flex-grow: 100000000;
+  max-width: 500px;
+}
+
+.release-info-cover img {
+  width: 100%;
+  height: auto;
+}
+
+.release-info-data {
+  flex: auto;
+  max-width: 500px;
+}
+
+.release-info-data-artist {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--p_cyan);
+}
+
+.release-info-data-title {
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.release-info-data-date {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.release-info-data-buy {
+  font-size: 1em;
+}
+
+figure {
+  margin: 0;
+}
+
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+@media (max-width: 300px) {
+  .release-info-cover {
+    flex: auto;
+    flex-grow: 0;
+    max-width: 500px;
+  }
+}

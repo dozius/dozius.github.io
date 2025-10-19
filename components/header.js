@@ -72,6 +72,19 @@ class HeaderElement extends HTMLElement {
     }
     navList.appendChild(home);
 
+    const music = document.createElement("li");
+    if (activeNav == "music") {
+      music.setAttribute("class", "nav-bar-active");
+      music.innerHTML = "Music";
+    }
+    else {
+      const musicLink = document.createElement("a");
+      musicLink.setAttribute("href", "/music");
+      musicLink.innerHTML = "Music";
+      music.appendChild(musicLink);
+    }
+    navList.appendChild(music);
+
     const grave = document.createElement("li");
     if (activeNav == "grave rave") {
       grave.setAttribute("class", "nav-bar-active");
@@ -183,7 +196,7 @@ class HeaderElement extends HTMLElement {
       font-weight: bold;
     }
 
-    @media (max-width: 475px) {
+    @media (max-width: 520px) {
       .header-nav-bar .nav-bar-list {
         opacity: 0;
         visibility: collapse;
